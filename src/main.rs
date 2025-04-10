@@ -41,7 +41,7 @@ struct TodoItem {
         fn complete_item(&mut self, id: u64) {
             if let Some(item) = self.items.iter_mut().find(|i| i.id == id) {
                 item.completed = true;
-                println!("Completed: task id: {} is complete.", id);
+                println!("Task id: {} is complete.", id);
             } else {
                 println!("Item with ID {} not found.", id);
             }
