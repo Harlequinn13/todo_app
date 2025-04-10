@@ -82,7 +82,7 @@ struct TodoItem {
                         Ok(num) => num,
                         Err(_) => continue,
                     };
-                    todo_list.complete_item(id);
+                    todo_list.complete_item(_id);
                 }
                 4=> {
                     println!("Exiting the program.");
