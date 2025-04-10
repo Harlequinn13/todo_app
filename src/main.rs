@@ -42,6 +42,8 @@ struct TodoItem {
             if let Some(item) = self.items.iter_mut().find(|i| i.id == id) {
                 item.completed = true;
                 println!("Completed: {} not found.", id);
+            } else {
+                println!("Item with ID {} not found.", id);
             }
         }
     }
@@ -80,7 +82,7 @@ struct TodoItem {
                         Ok(num) => num,
                         Err(_) => continue,
                     };
-                    todo_list.complete_item(id);
+                    todo_list.complete_item(_id);
                 }
                 4=> {
                     println!("Exiting the program.");
