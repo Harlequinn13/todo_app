@@ -42,6 +42,8 @@ struct TodoItem {
             if let Some(item) = self.items.iter_mut().find(|i| i.id == id) {
                 item.completed = true;
                 println!("Completed: {} not found.", id);
+            } else {
+                println!("Item with ID {} not found.", id);
             }
         }
     }
